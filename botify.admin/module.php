@@ -2,7 +2,7 @@
 
 /**
  * @package Управление пользователями
- * @version 1.0.0
+ * @version 1.0.1
  * @author  Botify <hello@botify.ru>
  * @link    https://botify.ru
  */
@@ -107,7 +107,7 @@ $bot->isAdmin(function() use($bot) {
         } else {
             foreach($list as $key => $user) {
                 $index = $key + 1;
-                $msg = "$index. [{$user['full_name']}](tg://user?id={$user['user_id']}) `{$user['user_id']}`\n";
+                $msg .= "$index. [{$user['full_name']}](tg://user?id={$user['user_id']}) `{$user['user_id']}`\n";
             }
         }
         $bot->reply($msg);
